@@ -1,0 +1,32 @@
+@import 'vars';
+@import 'mixins';
+
+/*
+	Photon by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+/* Basic */
+
+	html, body {
+		min-width: 320px;
+	}
+
+/* Main */
+
+	.main {
+		@include padding(2em, 1em);
+	}
+
+/* Header */
+
+	#header {
+		@include padding(3em, 1em, (0,0,$size-element-margin,0));
+	}
+
+/* Footer */
+
+	#footer {
+		@include padding(2em, 1em, (0,0,$size-element-margin,0));
+	}

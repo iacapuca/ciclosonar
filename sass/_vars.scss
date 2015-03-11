@@ -1,0 +1,50 @@
+// Mixins.
+	@mixin padding($tb, $lr, $pad: (0,0,0,0)) {
+		padding: ($tb + nth($pad,1)) ($lr + nth($pad,2)) max(0.1em, $tb - $size-element-margin + nth($pad,3)) ($lr + nth($pad,4));
+	}
+
+// Duration.
+	$duration-transition:		0.2s;
+
+// Size.
+	$size-border-radius:		4px;
+	$size-element-height:		2.75em;
+	$size-element-margin:		2em;
+
+// Font.
+	$font-family:				'Source Sans Pro', Helvetica, sans-serif;
+	$font-family-fixed:			'Courier New', monospace;
+	$font-weight:				300;
+	$font-weight-bold:			400;
+
+// Color.
+	$color-bg:					#fff;
+	$color-fg:					#666;
+	$color-fg-bold:				#555;
+	$color-fg-light:			#999;
+	$color-border:				rgba(144,144,144,0.5);
+	$color-border-bg:			rgba(144,144,144,0.075);
+	$color-border2:				rgba(144,144,144,0.75);
+	$color-border2-bg:			rgba(144,144,144,0.2);
+
+	$color-dark-bg:				#666666;
+	$color-dark-fg-bold:		#ffffff;
+	$color-dark-fg:				rgba(255,255,255,0.75);
+	$color-dark-fg-light:		rgba(255,255,255,0.5);
+	$color-dark-border:			#ffffff;
+	$color-dark-border-bg:		rgba(255,255,255,0.125);
+	$color-dark-border2:		rgba(255,255,255,0.75);
+	$color-dark-border2-bg:		rgba(255,255,255,0.25);
+
+	$color-accent1:				#c3e895;
+	$color-accent2:				#8addaa;
+	$color-accent3:				#6bd4c8;
+	$color-accent4:				#57aed3;
+	$color-accent5:				#4a87d3;
+	$color-accent6:				#6b88e6;
+	$color-accent1-alt:			desaturate(darken($color-accent1, 15), 20);
+	$color-accent2-alt:			desaturate(darken($color-accent2, 15), 20);
+	$color-accent3-alt:			desaturate(darken($color-accent3, 15), 20);
+	$color-accent4-alt:			desaturate(darken($color-accent4, 15), 20);
+	$color-accent5-alt:			desaturate(darken($color-accent5, 15), 20);
+	$color-accent6-alt:			desaturate(darken($color-accent6, 15), 20);

@@ -1,0 +1,245 @@
+@import '../vars';
+@import '../mixins';
+
+/*
+	Photon by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+// Vars
+
+	$color-border:				#ccc;
+	$color-border-bg:			transparent;
+	$color-border2:				#ccc;
+	$color-border2-bg:			transparent;
+
+	$color-dark-bg:				#666666;
+	$color-dark-fg-bold:		#ffffff;
+	$color-dark-fg:				#ffffff;
+	$color-dark-fg-light:		#ffffff;
+	$color-dark-border:			#ffffff;
+	$color-dark-border-bg:		transparent;
+	$color-dark-border2:		#ffffff;
+	$color-dark-border2-bg:		transparent;
+
+/* Basic */
+
+	hr {
+		border-bottom: solid 1px $color-border;
+	}
+
+	blockquote {
+		border-left: solid 4px $color-border;
+	}
+
+	code {
+		border: solid 1px $color-border;
+	}
+
+/* Section/Article */
+
+	header {
+		&.major {
+			&:after {
+				background: $color-border;
+			}
+		}
+	}
+
+/* Form */
+
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	select,
+	textarea {
+		-ms-behavior: url('css/ie/PIE.htc');
+		border: solid 1px $color-border;
+		position: relative;
+	}
+
+/* List */
+
+	ul {
+		&.alt {
+			li {
+				border-top: solid 1px $color-border;
+			}
+		}
+
+		&.major-icons {
+			li {
+				.icon {
+					-ms-behavior: url('css/ie/PIE.htc');
+					border: solid 1px $color-border;
+					position: relative;
+				}
+			}
+		}
+	}
+
+/* Table */
+
+	table {
+		thead {
+			border-bottom: solid 1px $color-border;
+		}
+
+		tfoot {
+			border-top: solid 1px $color-border;
+		}
+
+		&.alt {
+			tbody {
+				tr {
+					td {
+						border: solid 1px $color-border;
+						border-left-width: 0;
+						border-top-width: 0;
+					}
+				}
+			}
+		}
+	}
+
+/* Button */
+
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	button,
+	.button {
+		-ms-behavior: url('css/ie/PIE.htc');
+		border: solid 1px $color-border;
+		position: relative;
+	}
+
+/* Image */
+
+	.image {
+		-ms-behavior: url('css/ie/PIE.htc');
+
+		img {
+			-ms-behavior: url('css/ie/PIE.htc');
+			position: relative;
+		}
+	}
+
+// Dark (mixin)
+
+	@mixin dark($color-this-bg: $color-dark-bg) {
+		background-color: $color-this-bg;
+		color: $color-dark-fg;
+
+		a {
+			border-bottom-color: $color-dark-fg;
+
+			&:hover {
+				color: $color-dark-fg-bold;
+			}
+		}
+
+		h1, h2, h3, h4, h5, h6, strong, b {
+			color: $color-dark-fg-bold;
+		}
+
+		header {
+			p {
+				color: $color-dark-fg-bold;
+			}
+
+			&.major {
+				&:after {
+					background: $color-dark-border;
+				}
+			}
+		}
+
+		input[type="submit"],
+		input[type="reset"],
+		input[type="button"],
+		button,
+		.button {
+			border: solid 1px $color-dark-border !important;
+			color: $color-dark-fg-bold !important;
+
+			&:hover {
+				background-color: $color-dark-border-bg;
+			}
+
+			&:active {
+				background-color: $color-dark-border2-bg;
+			}
+
+			&.special {
+				background-color: $color-dark-fg-bold;
+				border: solid 1px $color-dark-border !important;
+				color: $color-this-bg !important;
+
+				&:hover {
+					background-color: $color-dark-border-bg !important;
+					color: $color-dark-fg-bold !important;
+				}
+
+				&:active {
+					background-color: $color-dark-border2-bg !important;
+				}
+			}
+		}
+
+		ul {
+			&.major-icons {
+				li {
+					.icon {
+						border-color: $color-dark-border;
+					}
+				}
+			}
+		}
+
+		.icon {
+			&.major {
+				color: $color-dark-fg-bold;
+			}
+		}
+	}
+
+/* Main */
+
+	.main {
+		&.style2 {
+			@include dark(#333);
+			-ms-behavior: url('css/ie/backgroundsize.min.htc');
+			background-image: url('../../images/header.jpg');
+			background-size: cover;
+			position: relative;
+
+			&:before {
+				background-image: url('../images/overlay1.png');
+				content: '';
+				height: 100%;
+				left: 0;
+				position: absolute;
+				top: 0;
+				width: 100%;
+			}
+
+			> * {
+				position: relative;
+				z-index: 1;
+			}
+		}
+	}
+
+/* Header */
+
+	#header {
+		@include dark(#4686a0);
+	}
+
+/* Footer */
+
+	#footer {
+		@include dark(#4686a0);
+	}

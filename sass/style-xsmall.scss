@@ -1,0 +1,94 @@
+@import 'vars';
+@import 'mixins';
+
+/*
+	Photon by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+/* List */
+
+	ul {
+		&.actions {
+			margin: 0 0 $size-element-margin 0;
+
+			li {
+				display: block;
+				padding: ($size-element-margin * 0.5) 0 0 0;
+				text-align: center;
+				width: 100%;
+
+				&:first-child {
+					padding-top: 0;
+				}
+
+				> * {
+					margin: 0 !important;
+					width: 100%;
+
+					&.icon {
+						&:before {
+							margin-left: -2em;
+						}
+					}
+				}
+			}
+
+			&.small {
+				li {
+					padding: ($size-element-margin * 0.25) 0 0 0;
+
+					&:first-child {
+						padding-top: 0;
+					}
+				}
+			}
+		}
+	}
+
+/* Button */
+
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	.button {
+		padding: 0;
+	}
+
+/* Main */
+
+	.main {
+		@include padding(2em, 1.5em);
+	}
+
+/* Header */
+
+	#header {
+		@include padding(4em, 2em, (0,0,$size-element-margin,0));
+
+		br {
+			display: none;
+		}
+	}
+
+/* Footer */
+
+	#footer {
+		@include padding(2em, 1.5em, (0,0,$size-element-margin,0));
+
+		.copyright {
+			margin: ($size-element-margin * 0.75) 0 0 0;
+
+			li {
+				border: 0;
+				display: block;
+				margin: 1em 0 0 0;
+				padding: 0;
+
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+		}
+	}
